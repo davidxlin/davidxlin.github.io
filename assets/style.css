@@ -1,0 +1,200 @@
+/* assets/style.css */
+body {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    background-color: #282828;
+    color: #ebdbb2;
+    margin: 0;
+}
+
+a {
+    color: #83a598;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fabd2f;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+}
+
+.name {
+    font-size: 20pt;
+    font-weight: 400;
+    color: #fe8019;
+    margin-bottom: 10px;
+}
+
+.menulink {
+    font-weight: 300;
+    color: #83a598;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.menulink:hover {
+    color: #fabd2f;
+}
+
+.in-text {
+    color: #b8bb26;
+}
+.in-text:hover {
+    color: #fabd2f;
+}
+
+.header {
+    font-size: 16pt;
+    font-weight: 400;
+    color: #fe8019;
+}
+
+.papertitle {
+    font-weight: 400;
+    font-size: 12pt;
+    color: #ebdbb2;
+}
+
+.thisauthor {
+    font-weight: bold;
+    color: #ebdbb2;
+}
+
+.instilogo {
+    height: 50px;
+    filter: grayscale(20%);
+}
+
+.noter {
+    font-size: 9pt;
+    color: #a89984;
+}
+
+.tagsep {
+    padding: 0 4px;
+    color: #a89984;
+}
+
+.tag {
+    padding-right: 2px;
+    color: #83a598;
+}
+
+.conf {
+    display: inline-block;
+    padding-bottom: 4px;
+    color: #d3869b;
+}
+
+.paper {
+    border-left: 1px solid #665c54;
+    margin-bottom: 10px;
+}
+
+.profilepic {
+    width: 150px;
+    height: auto;
+    border-radius: 0;
+    filter: grayscale(30%);
+    display: block;
+}
+
+.container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px; /* Crucial for Bootstrap grid alignment */
+    padding-right: 15px; /* Crucial for Bootstrap grid alignment */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px; /* Crucial for Bootstrap grid (offsets container padding) */
+    margin-left: -15px; /* Crucial for Bootstrap grid (offsets container padding) */
+}
+
+@media (min-width: 768px) {
+    .fixed-posi {
+        position: fixed;
+        top: 9rem; /* ADJUSTED: Set to 9rem to align with right column's text start */
+        left: calc((100vw - min(100vw, 1140px)) / 2 + 15px); /* Aligns with container's first col content start */
+        width: 250px; /* Sidebar width, adjust as needed */
+    }
+
+    .allstuff > .col-md-4 {
+        /* This column effectively sets the width for the sidebar space */
+        flex: 0 0 250px; /* MATCHES .fixed-posi width */
+        max-width: 250px; /* MATCHES .fixed-posi width */
+        position: relative;
+    }
+
+    .allstuff > .col-md-8 {
+        /* margin-left is sidebar width + desired gap */
+        margin-left: calc(250px + 20px); /* sidebar width (250px) + 20px gap */
+        flex-grow: 1; /* Takes up remaining space */
+        max-width: calc(100% - (250px + 20px)); /* Ensures it doesn't overflow */
+    }
+
+    .about {
+        /* Styles for the .about class if any are needed beyond .col-md-8 */
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .fixed-posi {
+        position: static;
+        width: auto;
+        text-align: center;
+        padding-top: 0 !important;
+        margin-bottom: 20px;
+    }
+
+    .allstuff > .col-md-4 {
+        padding-top: 1rem !important;
+        flex: 0 0 100%; /* Full width on mobile */
+        max-width: 100%;
+    }
+
+    .allstuff > .col-md-8 {
+        margin-left: 0; /* Reset desktop margin */
+        flex: 0 0 100%; /* Full width on mobile */
+        max-width: 100%;
+    }
+
+    .allstuffp {
+        padding-top: 1rem !important;
+    }
+
+    .profilepic {
+        width: 100px;
+        border-radius: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .menur {
+        padding-top: 1rem !important;
+        text-align: center;
+    }
+    .fixed-posi > div:not(.menur) > .menulink, .menur > .menulink {
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+.badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    color: #282828;
+    background-color: #fabd2f;
+}
