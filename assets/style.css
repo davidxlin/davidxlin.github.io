@@ -26,6 +26,13 @@ a:hover {
     margin-bottom: 10px;
 }
 
+.email-text {
+    color: #a89984;
+    font-size: 11pt;
+    font-weight: 300;
+    margin-top: -15px;
+}
+
 .menulink {
     font-weight: 300;
     color: #83a598;
@@ -197,4 +204,22 @@ a:hover {
     border-radius: .25rem;
     color: #282828;
     background-color: #fabd2f;
+}
+
+/* Styling for Teaching Experience section */
+.course-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 4px;
+}
+
+.course-name {
+    padding-right: 20px; /* Prevents text from touching on smaller screens */
+}
+
+.course-semester {
+    color: #a89984;
+    white-space: nowrap; /* Prevents semester text from wrapping */
+    text-align: right;
 }
