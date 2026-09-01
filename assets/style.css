@@ -122,6 +122,38 @@ a:hover {
     margin-left: -15px; /* Crucial for Bootstrap grid (offsets container padding) */
 }
 
+.badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    color: #282828;
+    background-color: #fabd2f;
+}
+
+/* Styling for Teaching Experience section */
+.course-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 4px;
+}
+
+.course-name {
+    padding-right: 20px; /* Prevents text from touching on smaller screens */
+}
+
+.course-semester {
+    color: #a89984;
+    white-space: nowrap; /* Prevents semester text from wrapping */
+    text-align: right;
+}
+
 @media (min-width: 768px) {
     .fixed-posi {
         position: fixed;
@@ -192,48 +224,19 @@ a:hover {
     }
 
     .course-item {
-        flex-direction: column;
-        margin-bottom: 8px;
+        display: block;
+        margin-bottom: 12px;
     }
 
     .course-name {
+        display: block;
         padding-right: 0;
     }
 
     .course-semester {
+        display: block;
         text-align: left;
         white-space: normal;
+        font-size: 10pt;
     }
-}
-
-.badge {
-    display: inline-block;
-    padding: .25em .4em;
-    font-size: 75%;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: .25rem;
-    color: #282828;
-    background-color: #fabd2f;
-}
-
-/* Styling for Teaching Experience section */
-.course-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding-bottom: 4px;
-}
-
-.course-name {
-    padding-right: 20px; /* Prevents text from touching on smaller screens */
-}
-
-.course-semester {
-    color: #a89984;
-    white-space: nowrap; /* Prevents semester text from wrapping */
-    text-align: right;
 }
