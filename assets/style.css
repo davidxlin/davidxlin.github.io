@@ -1,6 +1,6 @@
 /* assets/style.css */
 body {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Times', 'Times New Roman', serif;
     font-weight: 300;
     background-color: #282828;
     color: #ebdbb2;
@@ -149,7 +149,7 @@ a:hover {
     }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 767.98px) {
     .fixed-posi {
         position: static;
         width: auto;
@@ -189,6 +189,20 @@ a:hover {
     .fixed-posi > div:not(.menur) > .menulink, .menur > .menulink {
         display: inline-block;
         text-align: center;
+    }
+
+    .course-item {
+        flex-direction: column;
+        margin-bottom: 8px;
+    }
+
+    .course-name {
+        padding-right: 0;
+    }
+
+    .course-semester {
+        text-align: left;
+        white-space: normal;
     }
 }
 
